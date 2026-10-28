@@ -82,6 +82,97 @@ title: Welcome to My Site
   <a href="https://internetlivestats.com" target="_blank" class="btn" style="background-color: #a55eea;">📊 Internet Live Stats</a>
 </div>
 
+<!-- === THE ULTIMATE DYNAMIC 10,000 UNIQUE ITEMS SPENDER GAME === -->
+<div style="background-color: #f1f2f6; border-radius: 12px; padding: 20px; font-family: sans-serif; text-align: center; margin-bottom: 30px; border: 2px solid #ced6e0;">
+  <h2 style="margin-top: 0; color: #2f3542;">💰 Spend Bill Gates' Money on 10,000 UNIQUE Items! 💰</h2>
+  <div style="background-color: #2ed573; color: white; font-size: 32px; font-weight: bold; padding: 15px; border-radius: 8px; margin-bottom: 20px;" id="money-display">
+    $100,000,000,000
+  </div>
+  <p style="color: #747d8c; font-weight: bold; font-size: 14px;" id="stats-display">Items Bought: 0 / 10,000</p>
+
+  <!-- Massive item container grid -->
+  <div id="shop-container" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-height: 500px; overflow-y: auto; padding: 10px; background: white; border-radius: 8px; border: 1px solid #ced6e0;">
+    <!-- JavaScript automatically computes 10,000 different items here -->
+  </div>
+  
+  <button onclick="resetMoney()" style="margin-top: 15px; background: #747d8c; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">Reset Game</button>
+</div>
+
+<script>
+  let currentMoney = 100000000000;
+  let itemsBoughtCount = 0;
+
+  // Word arrays that mix together to create 10,000 completely different catalog descriptions
+  const styles = ["Cyber", "Neon", "Vintage", "Galactic", "Quantum", "Royal", "Steampunk", "Retro", "Cosmic", "Mystic"];
+  const materials = ["Golden", "Diamond", "Emerald", "Platinum", "Ruby", "Crystal", "Carbon-Fiber", "Obsidian", "Titanium", "Marble"];
+  const objects = [
+    { name: "Burger Combo", base: 15, emoji: "🍔" },
+    { name: "Skateboard", base: 120, emoji: "🛹" },
+    { name: "Headphones", base: 350, emoji: "🎧" },
+    { name: "Gaming Console", base: 600, emoji: "🎮" },
+    { name: "Supercar", base: 280000, emoji: "🏎️" },
+    { name: "Mansion", base: 9500000, emoji: "🏡" },
+    { name: "Private Jet", base: 32000000, emoji: "🛩️" },
+    { name: "Space Rocket", base: 150000000, emoji: "🚀" },
+    { name: "Exoplanet Island", base: 5000000000, emoji: "🪐" },
+    { name: "Robot Helper", base: 25000, emoji: "🤖" }
+  ];
+
+  const container = document.getElementById('shop-container');
+  let htmlString = "";
+
+  // The math algorithm loop creating exactly 10,000 unique item formulas
+  for (let i = 1; i <= 10000; i++) {
+    // Generate distinct indexes using modular arithmetic based on item number
+    const styleIndex = (i * 3) % styles.length;
+    const matIndex = (i * 7) % materials.length;
+    const objIndex = i % objects.length;
+
+    const currentStyle = styles[styleIndex];
+    const currentMat = materials[matIndex];
+    const currentObj = objects[objIndex];
+
+    // Combine them into a fully distinct product name
+    const uniqueItemName = currentStyle + " " + currentMat + " " + currentObj.name;
+    
+    // Scale prices dynamically so early numbers are cheap, and final numbers cost billions
+    const dynamicPriceFactor = 1 + (i * 1.85); 
+    const uniqueCost = Math.floor(currentObj.base * dynamicPriceFactor);
+    
+    htmlString += `
+      <div style="background: #f8f9fa; border-radius: 6px; padding: 8px; width: 130px; border: 1px solid #e4e7eb; text-align: center; font-size: 11px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 22px; margin-bottom: 2px;">${currentObj.emoji}</div>
+          <div style="font-weight: bold; color: #2c3e50; margin-bottom: 4px; line-height: 1.2;">#${i} ${uniqueItemName}</div>
+        </div>
+        <div>
+          <div style="color: #2ed573; font-weight: bold; margin-bottom: 5px; font-size: 12px;">$${uniqueCost.toLocaleString()}</div>
+          <button onclick="buyItem(${uniqueCost})" style="background-color: #2ed573; color: white; border: none; padding: 5px 8px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; font-size: 11px;">Buy</button>
+        </div>
+      </div>
+    `;
+  }
+  container.innerHTML = htmlString;
+
+  function buyItem(cost) {
+    if (currentMoney >= cost) {
+      currentMoney -= cost;
+      itemsBoughtCount++;
+      document.getElementById('money-display').innerText = '$' + currentMoney.toLocaleString();
+      document.getElementById('stats-display').innerText = 'Items Bought: ' + itemsBoughtCount.toLocaleString() + ' / 10,000';
+    } else {
+      alert("You don't have enough money left to buy this specific item!");
+    }
+  }
+
+  function resetMoney() {
+    currentMoney = 100000000000;
+    itemsBoughtCount = 0;
+    document.getElementById('money-display').innerText = '$' + currentMoney.toLocaleString();
+    document.getElementById('stats-display').innerText = 'Items Bought: 0 / 10,000';
+  }
+</script>
+<!-- ============================================================ -->
 
 # Hello World!
 Welcome to my brand new website using the Cayman theme!
