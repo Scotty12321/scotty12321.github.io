@@ -82,6 +82,83 @@ title: Welcome to My Site
   <a href="https://internetlivestats.com" target="_blank" class="btn" style="background-color: #a55eea;">📊 Internet Live Stats</a>
 </div>
 
+<!-- === THE MATRIX DIGITAL RAIN BACKGROUND SYSTEM === -->
+<canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
+<script>
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Set canvas size to fill the browser window perfectly
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  // Matrix characters configuration (Numbers, letters, and katakana style symbols)
+  const matrixChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ日月火水木金土日月";
+  const charArray = matrixChars.split("");
+
+  const fontSize = 16;
+  let columns = Math.floor(canvas.width / fontSize);
+
+  // An array of drops - one per column, starting randomly offscreen
+  let rainDrops = [];
+  for (let x = 0; x < columns; x++) {
+    rainDrops[x] = Math.random() * -100; // stagger start positions
+  }
+
+  function drawMatrixRain() {
+    // Semi-transparent black background creating the iconic trailing blur effect
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Set font style
+    ctx.font = fontSize + 'px monospace';
+
+    // Loop over the falling drops columns
+    for (let i = 0; i < rainDrops.length; i++) {
+      // Pick a random matrix symbol
+      const text = charArray[Math.floor(Math.random() * charArray.length)];
+      
+      // Calculate coordinates
+      const xPos = i * fontSize;
+      const yPos = rainDrops[i] * fontSize;
+
+      // Make the glowing tip brighter green, trailing down to standard matrix green
+      if (Math.random() > 0.98) {
+        ctx.fillStyle = '#fff'; // Bright white splash at the leading drop
+      } else {
+        ctx.fillStyle = '#0f0'; // Standard glowing Matrix green
+      }
+
+      ctx.fillText(text, xPos, yPos);
+
+      // Reset drop back to top once it hits the bottom boundary with a random delay factor
+      if (yPos > canvas.height && Math.random() > 0.975) {
+        rainDrops[i] = 0;
+      }
+
+      // Move drop down the screen speed
+      rainDrops[i]++;
+    }
+  }
+
+  // Recalculate columns seamlessly if client changes screen sizing/orientation
+  window.addEventListener('resize', () => {
+    columns = Math.floor(canvas.width / fontSize);
+    rainDrops = [];
+    for (let x = 0; x < columns; x++) {
+      rainDrops[x] = Math.random() * -100;
+    }
+  });
+
+  // Run the render animation clock continuously at roughly 30 frames per second
+  setInterval(drawMatrixRain, 35);
+</script>
+<!-- ================================================= -->
 
 
 # Hello World!
