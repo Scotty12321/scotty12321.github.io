@@ -175,6 +175,25 @@ title: Welcome to My Site
   setInterval(drawMatrixRain, 35);
 </script>
 <!-- =============================================== -->
+<!-- === CRITICAL SCROLLING FIX BLOCK === -->
+<style>
+  /* Forces the main website background to stay transparent so the canvas rain is always visible */
+  body, .site-header, .main-content, .footer {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  /* Locks the Matrix canvas container right to your viewport so it moves with you when you scroll */
+  #matrixCanvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: -9999 !important; /* Pushes the rain completely behind every single button and category */
+    pointer-events: none !important;
+  }
+</style>
 
 # Hello World!
 Welcome to my brand new website using the Cayman theme!
