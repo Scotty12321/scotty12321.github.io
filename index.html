@@ -3,7 +3,7 @@ layout: default
 title: My Ultimate Dashboard
 ---
 
-<!-- === CORE WEBSITE LAYOUT & STYLING === -->
+<!-- === MASTER LAYOUT STYLING === -->
 <style>
   html, body, .main-content, .site-header {
     background-color: #000000 !important;
@@ -50,79 +50,65 @@ title: My Ultimate Dashboard
   </button>
 </div>
 
-<!-- === THE 100 SOUND BOARD GRID === -->
+<!-- === THE 100 INTERACTIVE SOUND BUTTONS GAME === -->
 <h1 style="color: #00ff00; text-align: center; margin-top: 30px; position: relative; z-index: 10;">🔊 The Ultimate 100-Sound Mega Board 🔊</h1>
-<p style="text-align: center; color: #00ff00; position: relative; z-index: 10; margin-bottom: 25px;">Tap any of the 100 numbered buttons below to blast synthesized arcade effects instantly!</p>
+<p style="text-align: center; color: #00ff00; position: relative; z-index: 10; margin-bottom: 25px;">Tap any of the 100 continuous buttons below to make custom arcade chip sounds!</p>
 
-<div id="mega-sound-grid" class="btn-grid" style="justify-content: center; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 12px; border: 1px solid #00ff00; max-height: 400px; overflow-y: auto;"></div>
+<div id="mega-sound-grid" class="btn-grid" style="justify-content: center; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 12px; border: 1px solid #00ff00; max-height: 350px; overflow-y: auto;"></div>
 
-<!-- === GAME WEBSITES LINKS DASHBOARD === -->
-<h3 class="cat-title">🎮 Epic Browser Game Websites</h3>
+<!-- === YOUR COMPREHENSIVE 50 LINKS DASHBOARD === -->
+<h1 style="color: #00ff00; text-align: center; margin-top: 40px; position: relative; z-index: 10;">🌐 My Mega Links Dashboard</h1>
+
+<h3 class="cat-title">🧠 Learning & Science</h3>
 <div class="btn-grid">
-  <button onclick="openGrailBrowser('https://neal.fun')" class="btn" style="background-color: #2bcbba;">🎯 Neal.fun Games</button>
-  <button onclick="openGrailBrowser('https://crazygames.com')" class="btn" style="background-color: #ff4757;">⚡ CrazyGames Arcade</button>
-  <button onclick="openGrailBrowser('https://poki.com')" class="btn" style="background-color: #ffa502;">🌀 Poki Playground</button>
-  <button onclick="openGrailBrowser('https://y8.com')" class="btn" style="background-color: #1e272e;">🕹️ Y8 Classic Games</button>
-  <button onclick="openGrailBrowser('https://armorgames.com')" class="btn" style="background-color: #20bf6b;">🛡️ Armor Games</button>
-  <button onclick="openGrailBrowser('https://kongregate.com')" class="btn" style="background-color: #eb4d4b;">👾 Kongregate Arcade</button>
-  <button onclick="openGrailBrowser('https://addictinggames.com')" class="btn" style="background-color: #6c5ce7;">💥 Addicting Games</button>
-  <button onclick="openGrailBrowser('https://miniclip.com')" class="btn" style="background-color: #0984e3;">🔵 Miniclip Legends</button>
-  <button onclick="openGrailBrowser('https://digipuzzle.net')" class="btn" style="background-color: #10ac84;">🧩 DigiPuzzle Brain Games</button>
-  <button onclick="openGrailBrowser('https://mathplayground.com')" class="btn" style="background-color: #fd9644;">📐 Math Playground</button>
+  <button onclick="openGrailBrowser('https://wikipedia.org')" class="btn" style="background-color: #34495e;">📚 Wikipedia</button>
+  <button onclick="openGrailBrowser('https://nasa.gov')" class="btn" style="background-color: #2980b9;">🚀 NASA Science</button>
+  <button onclick="openGrailBrowser('https://khanacademy.org')" class="btn" style="background-color: #27ae60;">✏️ Khan Academy</button>
+  <button onclick="openGrailBrowser('https://duolingo.com')" class="btn" style="background-color: #78e08f;">🦉 Duolingo</button>
+  <button onclick="openGrailBrowser('https://nationalgeographic.com')" class="btn" style="background-color: #f1c40f; color: black !important;">🐆 National Geographic</button>
+  <button onclick="openGrailBrowser('https://ted.com')" class="btn" style="background-color: #e74c3c;">💡 TED Talks</button>
+  <button onclick="openGrailBrowser('https://si.edu')" class="btn" style="background-color: #8e44ad;">🏛️ Smithsonian</button>
+  <button onclick="openGrailBrowser('https://britannica.com')" class="btn" style="background-color: #16a085;">📖 Britannica</button>
+  <button onclick="openGrailBrowser('https://codecademy.com')" class="btn" style="background-color: #3c6382;">💻 Codecademy</button>
+  <button onclick="openGrailBrowser('https://brainpop.com')" class="btn" style="background-color: #fa8231;">🤖 BrainPOP</button>
 </div>
 
-<!-- === FULL-SCREEN TAB BROWSER VIEW & RED BACK BUTTON === -->
-<div id="grailBrowserContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 999999; background: #000;">
-  <button onclick="closeGrailBrowser()" style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #ff2a2a, #b30000); color: white !important; font-weight: bold; border: 2px solid white; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 15px rgba(255,0,0,0.5); z-index: 10000000; text-transform: uppercase; font-family: sans-serif;">
-    🟥 Return to Dashboard
-  </button>
-  <iframe id="grailBrowserFrame" style="width: 100%; height: 100%; border: none; margin: 0; padding: 0;"></iframe>
+<h3 class="cat-title">🎮 Fun & Educational Games</h3>
+<div class="btn-grid">
+  <button onclick="openGrailBrowser('https://code.org')" class="btn" style="background-color: #009432;">🧩 Code.org Hour of Code</button>
+  <button onclick="openGrailBrowser('https://mit.edu')" class="btn" style="background-color: #4a69bd;">🐱 MIT Scratch</button>
+  <button onclick="openGrailBrowser('https://geoguessr.com')" class="btn" style="background-color: #60a3bc;">🌍 GeoGuessr Map Game</button>
+  <button onclick="openGrailBrowser('https://chess.com')" class="btn" style="background-color: #78e08f;">♟️ Chess.com</button>
+  <button onclick="openGrailBrowser('https://coolmathgames.com')" class="btn" style="background-color: #e67e22;">➕ Cool Math Games</button>
+  <button onclick="openGrailBrowser('https://funbrain.com')" class="btn" style="background-color: #ed4c67;">🎈 Funbrain Arcade</button>
+  <button onclick="openGrailBrowser('https://abcya.com')" class="btn" style="background-color: #12cbc4;">✏️ ABCya Games</button>
+  <button onclick="openGrailBrowser('https://pbskids.org')" class="btn" style="background-color: #a3cb38;">📺 PBS Kids Zone</button>
+  <button onclick="openGrailBrowser('https://typingclub.com')" class="btn" style="background-color: #1289a7;">⌨️ TypingClub</button>
+  <button onclick="openGrailBrowser('https://nitrotype.com')" class="btn" style="background-color: #d1ccc0; color: black !important;">🏎️ Nitro Type</button>
 </div>
 
-<!-- === MASTER PROGRAM CONTROLS === -->
-<script>
-  // 1. Matrix Background Engine
-  const canvas = document.getElementById('matrixCanvas');
-  const ctx = canvas.getContext('2d');
-  function initCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  initCanvas();
-  const matrixChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const charArray = matrixChars.split("");
-  const fontSize = 16;
-  let columns = Math.floor(canvas.width / fontSize);
-  let rainDrops = [];
-  for (let x = 0; x < columns; x++) { rainDrops[x] = Math.random() * -100; }
-  function drawMatrixRain() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = fontSize + 'px monospace';
-    for (let i = 0; i < rainDrops.length; i++) {
-      const text = charArray[Math.floor(Math.random() * charArray.length)];
-      ctx.fillStyle = Math.random() > 0.98 ? '#fff' : '#00ff00';
-      ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
-      if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) { rainDrops[i] = 0; }
-      rainDrops[i]++;
-    }
-  }
-  setInterval(drawMatrixRain, 35);
+<h3 class="cat-title">🎨 Creativity & Creative Arts</h3>
+<div class="btn-grid">
+  <button onclick="openGrailBrowser('https://canva.com')" class="btn" style="background-color: #9b59b6;">🎨 Canva Design</button>
+  <button onclick="openGrailBrowser('https://pixlr.com')" class="btn" style="background-color: #3498db;">📸 Pixlr Editor</button>
+  <button onclick="openGrailBrowser('https://withgoogle.com')" class="btn" style="background-color: #e74c3c;">✏️ Quick Draw</button>
+  <button onclick="openGrailBrowser('https://chromeexperiments.com')" class="btn" style="background-color: #1abc9c;">🎵 Chrome Music Lab</button>
+  <button onclick="openGrailBrowser('https://autodraw.com')" class="btn" style="background-color: #2ecc71;">🤖 AutoDraw AI</button>
+  <button onclick="openGrailBrowser('https://origami-way.com')" class="btn" style="background-color: #f39c12;">📐 Origami Guide</button>
+  <button onclick="openGrailBrowser('https://instructables.com')" class="btn" style="background-color: #d35400;">🛠️ Instructables</button>
+  <button onclick="openGrailBrowser('https://crayola.com')" class="btn" style="background-color: #f1c40f; color: black !important;">🖍️ Crayola Crafts</button>
+  <button onclick="openGrailBrowser('https://poetryfoundation.org')" class="btn" style="background-color: #7f8c8d;">✍️ Poetry Foundation</button>
+  <button onclick="openGrailBrowser('https://artstation.com')" class="btn" style="background-color: #2c3e50;">🖼️ ArtStation</button>
+</div>
 
-  // 2. 10,000 Items Generator
-  let currentMoney = 100000000000;
-  let itemsBoughtCount = 0;
-  const word1 = ["Cyber", "Quantum", "Galactic", "Cosmic", "Nano", "Shadow", "Alpha", "Omega", "Solar", "Hyper"];
-  const word2 = ["Golden", "Diamond", "Emerald", "Platinum", "Neon", "Plasma", "Crystal", "Carbon", "Stealth", "Laser"];
-  const word3 = [{ n: "Burger", b: 10, e: "🍔" }, { n: "Skateboard", b: 90, e: "🛹" }, { n: "Console", b: 500, e: "🎮" }, { n: "Supercar", b: 200000, e: "🏎️" }, { n: "Mansion", b: 8000000, e: "🏡" }];
-  const shopGrid = document.getElementById('shop-container');
-  let gridHTML = "";
-  for (let i = 1; i <= 10000; i++) {
-    const uniqueItemTitle = word1[(i * 17) % word1.length] + " " + word2[(i * 23) % word2.length] + " " + word3[i % word3.length].n;
-    const uniqueCost = Math.floor(word3[i % word3.length].b * (1 + (i * 2.5)));
-    gridHTML += `<div style="background: #222; border-radius: 6px; padding: 8px; width: 135px; border: 1px solid #00ff00; text-align: center; font-size: 11px; display: flex; flex-direction: column; justify-content: space-between;"><div><div style="font-size: 22px;">${word3[i % word3.length].e}</div><div style="font-weight: bold; color: #00ff00;">#${i} ${uniqueItemTitle}</div></div><div><div style="color: #fff; font-weight: bold; margin-bottom: 5px;">$${uniqueCost.toLocaleString()}</div><button onclick="buyItem(${uniqueCost})" style="background-color: #00ff00; color: black; border: none; padding: 5px 8px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; font-size: 11px;">Buy</button></div></div>`;
-  }
-  shopGrid.innerHTML = gridHTML;
-  function buyItem(cost) { if (currentMoney >= cost) { currentMoney -= cost; itemsBoughtCount++; document.getElementById('money-display').innerText = '$' + currentMoney.toLocaleString(); document.getElementById('stats-display').innerText = 'Items Bought: ' + itemsBoughtCount.toLocaleString() + ' / 10,000'; } else { alert("Not enough cash!"); } }
-  function resetMoney() { currentMoney = 100000000000; itemsBoughtCount = 0; document.getElementById('money-display').innerText = '$' + currentMoney.toLocaleString(); document.getElementById('stats-display').innerText = 'Items Bought: 0 / 10,000'; }
-
-  // 3. 100 Sound Buttons Generator Loop
-  const soundNames = ["Arcade Coin", "Laser Blast", "Power Up", "Cartoon Boing", "Game Over", "Synth Beep", "Echo Blip", "Radar Ping", "Sci-Fi Zap", "Cyber Chirp"];
-  const neonColors = ["#c0392b", "#d35400", "#2980b9", "#27ae60", "#8e44ad", "#16a085", "#2c3e50", "#1abc9c", "#2ecc71", "#3498db"];
-  const soundContainer = document.getElementById('mega-sound-grid');
+<h3 class="cat-title">📡 News, Nature & Exploration</h3>
+<div class="btn-grid">
+  <button onclick="openGrailBrowser('https://tweentribune.com')" class="btn" style="background-color: #485460;">📰 TweenTribune</button>
+  <button onclick="openGrailBrowser('https://timeforkids.com')" class="btn" style="background-color: #ff3f34;">⏱️ Time for Kids</button>
+  <button onclick="openGrailBrowser('https://dogonews.com')" class="btn" style="background-color: #05c46b;">🐶 DOGO News</button>
+  <button onclick="openGrailBrowser('https://bbc.com')" class="btn" style="background-color: #ff5e57;">🔴 BBC News</button>
+  <button onclick="openGrailBrowser('https://weather.com')" class="btn" style="background-color: #1e90ff;">🌤️ Weather Channel</button>
+  <button onclick="openGrailBrowser('https://worldwildlife.org')" class="btn" style="background-color: #1e272e;">🐼 WWF Wildlife</button>
+  <button onclick="openGrailBrowser('https://audubon.org')" class="btn" style="background-color: #0be881;">🦅 Audubon Birds</button>
+  <button onclick="openGrailBrowser('https://google.com')" class="btn" style="background-color: #3c6382;">🌏 Google Earth</button>
+  <button onclick="openGrailBrowser('https://history.com')" class="btn" style="background-color: #8854d0;">🏰 History Channel</button>
