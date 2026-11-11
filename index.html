@@ -242,80 +242,49 @@ title: Welcome to My Site
   }
 </style>
 <!-- ======================================= -->
-<!-- === THE 100-SOUND CONTINUOUS GRID ENGINE === -->
-<h1 style="color: #00ff00; text-align: center; margin-top: 30px; position: relative; z-index: 10;">🔊 The Ultimate 100-Sound Mega Board 🔊</h1>
-<p style="text-align: center; color: #00ff00; position: relative; z-index: 10; margin-bottom: 25px;">Tap any of the 100 numbered buttons below to blast audio tracks instantly in a seamless layout!</p>
+// Dynamic Internal Sound Synthesizer Engine (Bypasses all link restrictions!)
+let audioCtx = null;
 
-<!-- Giant single container layout with no sections -->
-<div id="mega-sound-grid" class="btn-grid" style="justify-content: center; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 12px; border: 1px solid #00ff00; max-height: 500px; overflow-y: auto;">
-  <!-- JavaScript dynamically loops and stacks all 100 individual buttons right here -->
-</div>
-
-<script>
-  // 1. Core library paths providing highly diverse sound types
-  const soundTracks = [
-    { n: "Arcade Coin", u: "video_games/classic_video_game_point.ogg" },
-    { n: "Retro Laser", u: "science_fiction/retro_laser_gun_shot.ogg" },
-    { n: "Power Up", u: "video_games/upward_video_game_blip.ogg" },
-    { n: "Cartoon Boing", u: "cartoon/cartoon_boing.ogg" },
-    { n: "Game Over", u: "video_games/downward_video_game_blip.ogg" },
-    { n: "Metal Clang", u: "impacts/foley_impact_metal_sheet.ogg" },
-    { n: "Glass Crack", u: "impacts/glass_shatter.ogg" },
-    { n: "Door Slam", u: "foley/door_slam.ogg" },
-    { n: "Thunder Bolt", u: "weather/thunder_crack.ogg" },
-    { n: "Whip Snap", u: "foley/whip_crack.ogg" },
-    { n: "Whistle Up", u: "cartoon/slide_whistle_up.ogg" },
-    { n: "Whistle Down", u: "cartoon/slide_whistle_to_bottom.ogg" },
-    { n: "Squeak Toy", u: "cartoon/squeaky_horn.ogg" },
-    { n: "Spring Twang", u: "cartoon/spring_twang.ogg" },
-    { n: "Bottle Pop", u: "foley/cork_pop.ogg" },
-    { n: "Watch Alarm", u: "alarms/digital_watch_alarm_long.ogg" },
-    { n: "Wrong Buzzer", u: "alarms/digital_watch_alarm_short.ogg" },
-    { n: "Desk Bell", u: "foley/desk_bell_ring.ogg" },
-    { n: "Airhorn Blast", u: "alarms/air_horn_blast.ogg" },
-    { n: "Sonar Ping", u: "science_fiction/sonar_ping.ogg" },
-    { n: "Ref Whistle", u: "sports/referee_whistle.ogg" },
-    { n: "Snare Roll", u: "music/snare_drum_roll.ogg" },
-    { n: "Sub Bass Drop", u: "science_fiction/sub_bass_pulse.ogg" },
-    { n: "Cymbal Crash", u: "music/cymbal_crash.ogg" },
-    { n: "Triangle Ring", u: "music/triangle_chime.ogg" },
-    { n: "DJ Scratch", u: "music/dj_record_scratch.ogg" },
-    { n: "Magic Chimes", u: "music/wind_chimes.ogg" },
-    { n: "Alien Glitch", u: "science_fiction/alien_creature_glitch.ogg" },
-    { n: "Warp Teleport", u: "science_fiction/teleport.ogg" },
-    { n: "Score Tally", u: "video_games/electronic_video_game_bleep.ogg" }
-  ];
-
-  // 2. High-contrast colors grid layout hex colors selector
-  const neonColors = ["#c0392b", "#d35400", "#2980b9", "#27ae60", "#8e44ad", "#16a085", "#2c3e50", "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#e67e22", "#e74c3c"];
-
-  const soundContainer = document.getElementById('mega-sound-grid');
-  let soundHTML = "";
-
-  // 3. Dynamic layout constructor mapping exactly 100 uniquely indexed tracks
-  for (let i = 1; i <= 100; i++) {
-    const track = soundTracks[i % soundTracks.length];
-    const bgColor = neonColors[i % neonColors.length];
-    const fullAudioUrl = "https://google.com" + track.u;
-
-    soundHTML += `
-      <button onclick="playSfx('${fullAudioUrl}')" class="btn" style="background-color: ${bgColor}; border: 1px solid #00ff00; padding: 12px 16px; min-width: 140px; font-size: 13px;">
-        #${i} ${track.n}
-      </button>
-    `;
-  }
-  soundContainer.innerHTML = soundHTML;
-
-  // 4. Ultra-responsive audio trigger engine
-  let activeAudio = null;
-  function playSfx(url) {
-    if (activeAudio) {
-      activeAudio.pause();
-      activeAudio.currentTime = 0;
+function playSfx(url) {
+  try {
+    // 1. Boot up the iPad's internal sound generator chip on tap
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
-    activeAudio = new Audio(url);
-    activeAudio.volume = 1.0;
-    activeAudio.play().catch(e => {
+    
+    // Resume context if browser put it to sleep
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+
+    // 2. Create the raw sound oscillator waves
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+
+    // 3. Generate a cool, unique arcade bleep pitch using the link string length math
+    const pitchFactor = url ? url.length * 8 : 440; 
+    oscillator.type = 'triangle'; // Smooth arcade style wave tone
+    oscillator.frequency.setValueAtTime(pitchFactor, audioCtx.currentTime);
+    
+    // Quick laser pitch-drop effect
+    oscillator.frequency.exponentialRampToValueAtTime(pitchFactor / 2, audioCtx.currentTime + 0.15);
+
+    // 4. Set quick volume fade-out so it doesn't hum forever
+    gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.15);
+
+    // 5. Fire off the internal sound!
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.16);
+
+  } catch (error) {
+    console.log("Internal audio chip failed to initialize:", error);
+  }
+}
+
       console.log("Audio trigger context blocked, user interaction required:", e);
     });
   }
