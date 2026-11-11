@@ -1,114 +1,413 @@
 ---
 layout: default
-title: My Ultimate Dashboard
+title: Welcome to My Site
 ---
+<h1>My Mega Links Dashboard</h1>
+<p>Welcome to my massive collection of 50 awesome, interactive button links! Click any button to explore.</p>
 
-<!-- === MASTER LAYOUT STYLING === -->
 <style>
-  html, body, .main-content, .site-header {
-    background-color: #000000 !important;
-    background: #000000 !important;
+  .btn-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .btn { color: white; padding: 10px 18px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: bold; text-decoration: none; display: inline-block; transition: transform 0.1s; }
+  .btn:active { transform: scale(0.95); }
+  .cat-title { font-size: 18px; color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 4px; margin-top: 20px; }
+</style>
+
+<h3 class="cat-title">🧠 Learning & Science</h3>
+<div class="btn-grid">
+  <a href="https://wikipedia.org" target="_blank" class="btn" style="background-color: #34495e;">📚 Wikipedia</a>
+  <a href="https://nasa.gov" target="_blank" class="btn" style="background-color: #2980b9;">🚀 NASA Science</a>
+  <a href="https://khanacademy.org" target="_blank" class="btn" style="background-color: #27ae60;">✏️ Khan Academy</a>
+  <a href="https://duolingo.com" target="_blank" class="btn" style="background-color: #78e08f;">🦉 Duolingo</a>
+  <a href="https://nationalgeographic.com" target="_blank" class="btn" style="background-color: #f1c40f; color: black;">🐆 National Geographic</a>
+  <a href="https://ted.com" target="_blank" class="btn" style="background-color: #e74c3c;">💡 TED Talks</a>
+  <a href="https://si.edu" target="_blank" class="btn" style="background-color: #8e44ad;">🏛️ Smithsonian</a>
+  <a href="https://britannica.com" target="_blank" class="btn" style="background-color: #16a085;">📖 Encyclopedia Britannica</a>
+  <a href="https://codecademy.com" target="_blank" class="btn" style="background-color: #3c6382;">💻 Codecademy</a>
+  <a href="https://brainpop.com" target="_blank" class="btn" style="background-color: #fa8231;">🤖 BrainPOP</a>
+</div>
+
+<h3 class="cat-title">🎮 Fun & Educational Games</h3>
+<div class="btn-grid">
+  <a href="https://code.org" target="_blank" class="btn" style="background-color: #009432;">🧩 Code.org Hour of Code</a>
+  <a href="https://mit.edu" target="_blank" class="btn" style="background-color: #4a69bd;">🐱 MIT Scratch</a>
+  <a href="https://geoguessr.com" target="_blank" class="btn" style="background-color: #60a3bc;">🌍 GeoGuessr Map Game</a>
+  <a href="https://chess.com" target="_blank" class="btn" style="background-color: #78e08f;">♟️ Chess.com</a>
+  <a href="https://coolmathgames.com" target="_blank" class="btn" style="background-color: #e67e22;">➕ Cool Math Games</a>
+  <a href="https://funbrain.com" target="_blank" class="btn" style="background-color: #ed4c67;">🎈 Funbrain Arcade</a>
+  <a href="https://abcya.com" target="_blank" class="btn" style="background-color: #12cbc4;">✏️ ABCya Games</a>
+  <a href="https://pbskids.org" target="_blank" class="btn" style="background-color: #a3cb38;">📺 PBS Kids Zone</a>
+  <a href="https://typingclub.com" target="_blank" class="btn" style="background-color: #1289a7;">⌨️ TypingClub Practice</a>
+  <a href="https://nitrotype.com" target="_blank" class="btn" style="background-color: #d1ccc0; color: black;">🏎️ Nitro Type Racing</a>
+</div>
+
+<h3 class="cat-title">🎨 Creativity & Creative Arts</h3>
+<div class="btn-grid">
+  <a href="https://canva.com" target="_blank" class="btn" style="background-color: #9b59b6;">🎨 Canva Design</a>
+  <a href="https://pixlr.com" target="_blank" class="btn" style="background-color: #3498db;">📸 Pixlr Photo Editor</a>
+  <a href="https://withgoogle.com" target="_blank" class="btn" style="background-color: #e74c3c;">✏️ Google Quick Draw</a>
+  <a href="https://chromeexperiments.com" target="_blank" class="btn" style="background-color: #1abc9c;">🎵 Chrome Music Lab</a>
+  <a href="https://autodraw.com" target="_blank" class="btn" style="background-color: #2ecc71;">🤖 AutoDraw AI Art</a>
+  <a href="https://origami-way.com" target="_blank" class="btn" style="background-color: #f39c12;">📐 Origami Instructions</a>
+  <a href="https://instructables.com" target="_blank" class="btn" style="background-color: #d35400;">🛠️ Instructables Crafts</a>
+  <a href="https://crayola.com" target="_blank" class="btn" style="background-color: #f1c40f; color: black;">🖍️ Crayola Crafts</a>
+  <a href="https://poetryfoundation.org" target="_blank" class="btn" style="background-color: #7f8c8d;">✍️ Poetry Foundation</a>
+  <a href="https://artstation.com" target="_blank" class="btn" style="background-color: #2c3e50;">🖼️ ArtStation Portfolios</a>
+</div>
+
+<h3 class="cat-title">📡 News, Nature & Exploration</h3>
+<div class="btn-grid">
+  <a href="https://tweentribune.com" target="_blank" class="btn" style="background-color: #485460;">📰 Smithsonian TweenTribune</a>
+  <a href="https://timeforkids.com" target="_blank" class="btn" style="background-color: #ff3f34;">⏱️ Time for Kids News</a>
+  <a href="https://dogonews.com" target="_blank" class="btn" style="background-color: #05c46b;">🐶 DOGO News for Kids</a>
+  <a href="https://bbc.com" target="_blank" class="btn" style="background-color: #ff5e57;">🔴 BBC Global News</a>
+  <a href="https://weather.com" target="_blank" class="btn" style="background-color: #1e90ff;">🌤️ The Weather Channel</a>
+  <a href="https://worldwildlife.org" target="_blank" class="btn" style="background-color: #1e272e;">🐼 World Wildlife Fund</a>
+  <a href="https://audubon.org" target="_blank" class="btn" style="background-color: #0be881;">🦅 Audubon Birds Guide</a>
+  <a href="https://google.com" target="_blank" class="btn" style="background-color: #3c6382;">🌏 Google Earth Studio</a>
+  <a href="https://history.com" target="_blank" class="btn" style="background-color: #8854d0;">🏰 History Channel</a>
+  <a href="https://space.com" target="_blank" class="btn" style="background-color: #000000;">🌌 Space.com Updates</a>
+</div>
+
+<h3 class="cat-title">🛠️ Useful Internet Tools</h3>
+<div class="btn-grid">
+  <a href="https://google.com" target="_blank" class="btn" style="background-color: #ea4335;">🌐 Google Search</a>
+  <a href="https://dictionary.com" target="_blank" class="btn" style="background-color: #4b7bec;">🔤 Dictionary.com</a>
+  <a href="https://thesaurus.com" target="_blank" class="btn" style="background-color: #45aaf2;">📖 Thesaurus Synonyms</a>
+  <a href="https://google.com" target="_blank" class="btn" style="background-color: #a55eea;">🗺️ Google Translate</a>
+  <a href="https://wolframalpha.com" target="_blank" class="btn" style="background-color: #ff8225;">🔢 WolframAlpha Solver</a>
+  <a href="https://desmos.com" target="_blank" class="btn" style="background-color: #d63031;">📈 Desmos Graphing Calc</a>
+  <a href="https://github.com" target="_blank" class="btn" style="background-color: #2d3436;">💻 GitHub Community</a>
+  <a href="https://stackexchange.com" target="_blank" class="btn" style="background-color: #20bf6b;">❓ Stack Exchange Forum</a>
+  <a href="https://worldtimebuddy.com" target="_blank" class="btn" style="background-color: #f7b731; color: black;">⏰ World Time Buddy</a>
+  <a href="https://internetlivestats.com" target="_blank" class="btn" style="background-color: #a55eea;">📊 Internet Live Stats</a>
+</div>
+<!-- === FIXED MATRIX BACKGROUND & STYLING SYSTEM === -->
+<style>
+  /* Forces all your headings, text, and categories to turn glowing neon green for easy reading */
+  body, h1, h2, h3, p, div, label {
+    color: #00ff00 !important;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+
+  /* Fixes the item grid text layout inside the shop box */
+  #shop-container div {
+    color: #000000 !important; /* Keeps the inside text of small shop boxes dark so they stand out */
+    text-shadow: none !important;
+  }
+
+  /* Retains the clean colors for shop buttons */
+  #shop-container button, .btn {
+    text-shadow: none !important;
+  }
+</style>
+
+<canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
+<script>
+  const canvas = document.getElementById('matrixCanvas');
+  const ctx = canvas.getContext('2d');
+
+  // Set standard scale independent of window scrolling position
+  function initCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  initCanvas();
+
+  // Matrix symbols
+  const matrixChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ日月火水木金土";
+  const charArray = matrixChars.split("");
+
+  const fontSize = 16;
+  let columns = Math.floor(canvas.width / fontSize);
+
+  // Stagger start coordinates so rain doesn't fall all at once
+  let rainDrops = [];
+  for (let x = 0; x < columns; x++) {
+    rainDrops[x] = Math.random() * -100;
+  }
+
+  function drawMatrixRain() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < rainDrops.length; i++) {
+      const text = charArray[Math.floor(Math.random() * charArray.length)];
+
+      const xPos = i * fontSize;
+      const yPos = rainDrops[i] * fontSize;
+
+      if (Math.random() > 0.98) {
+        ctx.fillStyle = '#ffffff'; // White leading drop highlight
+      } else {
+        ctx.fillStyle = '#00ff00'; // Matrix green text color
+      }
+
+      ctx.fillText(text, xPos, yPos);
+
+      // Reset drop loop smoothly without being triggered by global layout scrolling changes
+      if (yPos > canvas.height && Math.random() > 0.975) {
+        rainDrops[i] = 0;
+      }
+      rainDrops[i]++;
+    }
+  }
+
+  // Only recalibrate layout if the actual browser orientation changes, not on casual scrolling
+  let lastWidth = window.innerWidth;
+  let lastHeight = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth !== lastWidth || window.innerHeight !== lastHeight) {
+      lastWidth = window.innerWidth;
+      lastHeight = window.innerHeight;
+      initCanvas();
+      columns = Math.floor(canvas.width / fontSize);
+      rainDrops = [];
+      for (let x = 0; x < columns; x++) {
+        rainDrops[x] = Math.random() * -100;
+      }
+    }
+  });
+
+  setInterval(drawMatrixRain, 35);
+</script>
+<!-- =============================================== -->
+<!-- === FIXED SCREEN BOUNDS FOR SCROLLING === -->
+<style>
+  /* Keeps the website canvas locked inside your viewport instead of expanding down the page */
+  html, body {
     margin: 0 !important;
     padding: 0 !important;
     height: 100% !important;
     overflow-x: hidden !important;
   }
-  body, h1, h2, h3, p, div, label {
-    color: #00ff00 !important;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+
+  /* Ensures the white theme content boxes turn transparent so you can always see the dark background */
+  .main-content, .site-header, body {
+    background: transparent !important;
+    background-color: transparent !important;
   }
-  #shop-container div {
-    color: #000000 !important;
-    text-shadow: none !important;
+
+  /* Completely anchors the Matrix background canvas to your tablet screen grid layout */
+  #matrixCanvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: -999 !important;
+    pointer-events: none !important;
   }
-  #shop-container button, .btn {
-    text-shadow: none !important;
-  }
-  .btn-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; position: relative; z-index: 10; }
-  .btn { color: white; padding: 10px 18px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: bold; text-decoration: none; display: inline-block; transition: transform 0.1s; }
-  .btn:active { transform: scale(0.95); }
-  .cat-title { font-size: 18px; color: #00ff00 !important; border-bottom: 2px solid #00ff00; padding-bottom: 4px; margin-top: 20px; position: relative; z-index: 10; }
 </style>
-
-<!-- === MATRIX BACKGROUND CANVAS === -->
-<canvas id="matrixCanvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
-
-<!-- === 10,000 UNIQUE ITEMS SPENDER GAME === -->
-<div style="position: relative; z-index: 10; background-color: #111; border-radius: 12px; padding: 20px; font-family: sans-serif; text-align: center; margin-bottom: 30px; border: 2px solid #00ff00; box-shadow: 0 0 10px rgba(0,255,0,0.3);">
-  <h2 style="margin-top: 0; color: #00ff00;">💰 Spend Bill Gates' Money on 10,000 TOTALLY UNIQUE Items! 💰</h2>
-  <div style="background-color: #00ff00; color: black; font-size: 32px; font-weight: bold; padding: 15px; border-radius: 8px; margin-bottom: 20px;" id="money-display">$100,000,000,000</div>
-  <p style="color: #00ff00; font-weight: bold; font-size: 14px;" id="stats-display">Items Bought: 0 / 10,000</p>
-  <div id="shop-container" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-height: 400px; overflow-y: auto; padding: 10px; background: #000; border-radius: 8px; border: 1px solid #00ff00;"></div>
-  <button onclick="resetMoney()" style="margin-top: 15px; background: #00ff00; color: black; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">Reset Game</button>
+<!-- === BONUS GAMES LINKS CATEGORY === -->
+<h3 class="cat-title">🎮 Epic Browser Game Websites</h3>
+<div class="btn-grid">
+  <a href="https://neal.fun" target="_blank" class="btn" style="background-color: #2bcbba;">🎯 Neal.fun Games</a>
+  <a href="https://crazygames.com" target="_blank" class="btn" style="background-color: #ff4757;">⚡ CrazyGames Arcade</a>
+  <a href="https://poki.com" target="_blank" class="btn" style="background-color: #ffa502;">🌀 Poki Games Playground</a>
+  <a href="https://y8.com" target="_blank" class="btn" style="background-color: #1e272e;">🕹️ Y8 Classic Games</a>
+  <a href="https://armorgames.com" target="_blank" class="btn" style="background-color: #20bf6b;">🛡️ Armor Games</a>
+  <a href="https://kongregate.com" target="_blank" class="btn" style="background-color: #eb4d4b;">👾 Kongregate Arcade</a>
+  <a href="https://addictinggames.com" target="_blank" class="btn" style="background-color: #6c5ce7;">💥 Addicting Games</a>
+  <a href="https://miniclip.com" target="_blank" class="btn" style="background-color: #0984e3;">🔵 Miniclip Legends</a>
+  <a href="https://digipuzzle.net" target="_blank" class="btn" style="background-color: #10ac84;">🧩 DigiPuzzle Brain Games</a>
+  <a href="https://mathplayground.com" target="_blank" class="btn" style="background-color: #fd9644;">📐 Math Playground</a>
 </div>
-
 <!-- === THE HOLY GRAIL EAGLERCRAFT LINK === -->
-<div style="text-align: center; margin: 40px 0; position: relative; z-index: 10;">
+<div style="text-align: center; margin: 40px 0;">
   <p style="color: #ffd700 !important; font-size: 14px; font-weight: bold; letter-spacing: 2px; margin-bottom: 5px; text-transform: uppercase;">✨ The Holy Grail of Dashboard Links ✨</p>
-  <button onclick="openGrailBrowser('https://eaglercraft.com')" class="grail-btn" style="background: linear-gradient(135deg, #ffd700, #ffa500); color: #000000 !important; font-size: 28px; font-weight: 900; padding: 22px 50px; border: 4px solid #ffffff; border-radius: 50px; cursor: pointer; font-family: 'Courier New', Courier, monospace; box-shadow: 0 0 30px #ffd700; text-transform: uppercase; letter-spacing: 1px;">
-    👑 PLAY EAGLERCRAFT 👑
+
+  <a href="https://eaglercraft.com" target="_blank" style="text-decoration: none; display: inline-block;">
+    <button class="grail-btn" style="background: linear-gradient(135deg, #ffd700, #ffa500); color: #000000 !important; font-size: 28px; font-weight: 900; padding: 22px 50px; border: 4px solid #ffffff; border-radius: 50px; cursor: pointer; font-family: 'Courier New', Courier, monospace; box-shadow: 0 0 30px #ffd700, inset 0 0 15px rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 1px; transition: transform 0.2s;">
+      👑 PLAY EAGLERCRAFT 👑
+    </button>
+  </a>
+</div>
+
+<style>
+  /* Epic pulsing animation effect to make the button look alive */
+  @keyframes grailGlow {
+    0% { transform: scale(1); box-shadow: 0 0 25px #ffd700; }
+    50% { transform: scale(1.04); box-shadow: 0 0 50px #ff8c00, 0 0 20px #ffd700; }
+    100% { transform: scale(1); box-shadow: 0 0 25px #ffd700; }
+  }
+  .grail-btn {
+    animation: grailGlow 2s infinite ease-in-out;
+  }
+  .grail-btn:active {
+    transform: scale(0.95) !important;
+  }
+</style>
+<!-- ======================================= -->
+<!-- === THE 50 SOUND MEGA SOUNDBOARD === -->
+<h1 style="color: #00ff00; text-align: center; margin-top: 30px;">🔊 The 50-Sound Mega Soundboard 🔊</h1>
+<p style="text-align: center; color: #00ff00;">Tap any button below to fire off high-quality sound effects instantly!</p>
+
+<h3 class="cat-title">💥 Impacts & Explosions</h3>
+<div class="btn-grid">
+  <button onclick="playSfx('foley_impact_metal_sheet')" class="btn" style="background-color: #c0392b;">🔨 Metal Sheet Clang</button>
+  <button onclick="playSfx('slap_sticky')" class="btn" style="background-color: #d35400;">🤚 Sticky Slap</button>
+  <button onclick="playSfx('glass_shatter')" class="btn" style="background-color: #2980b9;">💎 Glass Crack</button>
+  <button onclick="playSfx('wood_plank_drop')" class="btn" style="background-color: #7f8c8d;">🪵 Wood Plank Drop</button>
+  <button onclick="playSfx('heavy_thud')" class="btn" style="background-color: #27ae60;">📦 Box Thud</button>
+  <button onclick="playSfx('door_slam')" class="btn" style="background-color: #8e44ad;">🚪 Door Slam</button>
+  <button onclick="playSfx('anvil_strike')" class="btn" style="background-color: #16a085;">⚓ Anvil Strike</button>
+  <button onclick="playSfx('thunder_crack')" class="btn" style="background-color: #2c3e50;">⚡ Thunder Crack</button>
+  <button onclick="playSfx('whip_crack')" class="btn" style="background-color: #d35400;">🐍 Whip Snap</button>
+  <button onclick="playSfx('balloon_pop')" class="btn" style="background-color: #c0392b;">🎈 Balloon Pop</button>
+</div>
+
+<h3 class="cat-title">🤪 Cartoon & Funny</h3>
+<div class="btn-grid">
+  <button onclick="playSfx('cartoon_boing')" class="btn" style="background-color: #2980b9;">🤸 Cartoon Boing</button>
+  <button onclick="playSfx('slide_whistle_up')" class="btn" style="background-color: #8e44ad;">📈 Whistle Up</button>
+  <button onclick="playSfx('slide_whistle_down')" class="btn" style="background-color: #2c3e50;">📉 Whistle Down</button>
+  <button onclick="playSfx('spring_twang')" class="btn" style="background-color: #27ae60;">🌀 Spring Twang</button>
+  <button onclick="playSfx('slip_trip')" class="btn" style="background-color: #16a085;">🍌 Banana Slip</button>
+  <button onclick="playSfx('bike_horn')" class="btn" style="background-color: #f39c12; color: black;">🎺 Squeak Horn</button>
+  <button onclick="playSfx('pop_cork')" class="btn" style="background-color: #d35400;">🍾 Bottle Pop</button>
+  <button onclick="playSfx('rubber_duck')" class="btn" style="background-color: #f1c40f; color: black;">🦆 Rubber Ducky</button>
+  <button onclick="playSfx('zip_fast')" class="btn" style="background-color: #7f8c8d;">⚡ Fast Zip</button>
+  <button onclick="playSfx('splat_mud')" class="btn" style="background-color: #a4b0be; color: black;">💩 Mud Splat</button>
+</div>
+
+<h3 class="cat-title">🎮 Arcade & Retro Gaming</h3>
+<div class="btn-grid">
+  <button onclick="playSfx('retro_laser')" class="btn" style="background-color: #1abc9c;">🔫 Retro Laser</button>
+  <button onclick="playSfx('coin_collect')" class="btn" style="background-color: #f1c40f; color: black;">🪙 Shiny Coin</button>
+  <button onclick="playSfx('power_up')" class="btn" style="background-color: #2ecc71;">🔋 Power Up</button>
+  <button onclick="playSfx('game_over')" class="btn" style="background-color: #e74c3c;">💀 Game Over</button>
+  <button onclick="playSfx('jump_arcade')" class="btn" style="background-color: #3498db;">👟 Arcade Jump</button>
+  <button onclick="playSfx('alien_glitch')" class="btn" style="background-color: #9b59b6;"> aliens Glitch</button>
+  <button onclick="playSfx('teleport')" class="btn" style="background-color: #34495e;">🌀 Teleport Warp</button>
+  <button onclick="playSfx('points_tally')" class="btn" style="background-color: #1abc9c;">📊 Score Counter</button>
+  <button onclick="playSfx('blip_select')" class="btn" style="background-color: #7f8c8d;">🔘 Menu Click</button>
+  <button onclick="playSfx('level_clear')" class="btn" style="background-color: #2ecc71;">🏆 Level Clear</button>
+</div>
+
+<h3 class="cat-title">🚨 Alarms & Alerts</h3>
+<div class="btn-grid">
+  <button onclick="playSfx('digital_alarm')" class="btn" style="background-color: #e74c3c;">⏰ Watch Alarm</button>
+  <button onclick="playSfx('buzzer_wrong')" class="btn" style="background-color: #c0392b;">❌ Error Buzzer</button>
+  <button onclick="playSfx('bell_ring')" class="btn" style="background-color: #3498db;">🔔 Desk Bell</button>
+  <button onclick="playSfx('siren_warn')" class="btn" style="background-color: #e67e22;">🚨 Alert Siren</button>
+  <button onclick="playSfx('car_horn')" class="btn" style="background-color: #7f8c8d;">🚗 Car Honk</button>
+  <button onclick="playSfx('smoke_detector')" class="btn" style="background-color: #e74c3c;">⚠️ Smoke Beep</button>
+  <button onclick="playSfx('sonar_ping')" class="btn" style="background-color: #1abc9c;">🛰️ Sonar Ping</button>
+  <button onclick="playSfx('referee_whistle')" class="btn" style="background-color: #f1c40f; color: black;">🏁 Ref Whistle</button>
+  <button onclick="playSfx('doorbell')" class="btn" style="background-color: #9b59b6;">🔔 Ding Dong</button>
+  <button onclick="playSfx('clock_tick')" class="btn" style="background-color: #34495e;">⏱️ Clock Tick</button>
+</div>
+
+<h3 class="cat-title">🎵 Instruments & Beats</h3>
+<div class="btn-grid">
+  <button onclick="playSfx('snare_roll')" class="btn" style="background-color: #34495e;">🥁 Snare Roll</button>
+  <button onclick="playSfx('bass_drop')" class="btn" style="background-color: #111; border: 1px solid #00ff00;">🔊 Sub Bass Drop</button>
+  <button onclick="playSfx('cymbal_crash')" class="btn" style="background-color: #f1c40f; color: black;">📀 Cymbal Crash</button>
+  <button onclick="playSfx('triangle_ding')" class="btn" style="background-color: #1abc9c;">📐 Triangle Chime</button>
+  <button onclick="playSfx('piano_chord')" class="btn" style="background-color: #ffffff; color: black;">🎹 Piano Chord</button>
+  <button onclick="playSfx('guitar_strum')" class="btn" style="background-color: #d35400;">🎸 Acoustic Strum</button>
+  <button onclick="playSfx('cowbell')" class="btn" style="background-color: #7f8c8d;">🐮 Extra Cowbell</button>
+  <button onclick="playSfx('record_scratch')" class="btn" style="background-color: #2c3e50;">💿 DJ Scratch</button>
+  <button onclick="playSfx('harp_strum')" class="btn" style="background-color: #9b59b6;">👼 Harp Glissando</button>
+  <button onclick="playSfx('chime_cascade')" class="btn" style="background-color: #2ecc71;">✨ Magic Chimes</button>
+</div>
+
+<script>
+  // High-performance sound effects database link dictionary mapping triggers to open audio files
+  const sfxLibrary = {
+    foley_impact_metal_sheet: "https://google.com",
+    slap_sticky: "https://google.com",
+    glass_shatter: "https://google.com",
+    wood_plank_drop: "https://google.com",
+    heavy_thud: "https://google.com",
+    door_slam: "https://google.com",
+    anvil_strike: "https://google.com",
+    thunder_crack: "https://google.com",
+    whip_crack: "https://google.com",
+    balloon_pop: "https://google.com",
+    cartoon_boing: "https://google.com",
+    slide_whistle_up: "https://google.com",
+    slide_whistle_down: "https://google.com",
+    spring_twang: "https://google.com",
+    slip_trip: "https://google.com",
+    bike_horn: "https://google.com",
+    pop_cork: "https://google.com",
+    rubber_duck: "https://google.com",
+    zip_fast: "https://google.com",
+    splat_mud: "https://google.com",
+    retro_laser: "https://google.com",
+    coin_collect: "https://google.com",
+    power_up: "https://google.com",
+    game_over: "https://google.com",
+    jump_arcade: "https://google.com",
+    alien_glitch: "https://google.com",
+    teleport: "https://google.com",
+    points_tally: "https://google.com",
+    blip_select: "https://google.com",
+    level_clear: "https://google.com",
+    digital_alarm: "https://google.com",
+    buzzer_wrong: "https://google.com",
+    bell_ring: "https://google.com",
+    siren_warn: "https://google.com",
+    car_horn: "https://google.com",
+    smoke_detector: "https://google.com",
+    sonar_ping: "https://google.com",
+<!-- === THE HOLY GRAIL FULL-SCREEN NAVIGATOR & RED BACK BUTTON === -->
+<div id="grailBrowserContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 999999; background: #000;">
+  <!-- Giant Floating Red Back Button -->
+  <button onclick="closeGrailBrowser()" style="position: absolute; top: 15px; left: 15px; background: linear-gradient(135deg, #ff2a2a, #b30000); color: white !important; font-weight: bold; border: 2px solid white; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 15px rgba(255,0,0,0.5); z-index: 10000000; text-transform: uppercase; font-family: sans-serif;">
+    🟥 Return to Dashboard
   </button>
+  
+  <!-- Interactive View Frame -->
+  <iframe id="grailBrowserFrame" style="width: 100%; height: 100%; border: none; margin: 0; padding: 0;"></iframe>
 </div>
 
-<!-- === THE 100 INTERACTIVE SOUND BUTTONS GAME === -->
-<h1 style="color: #00ff00; text-align: center; margin-top: 30px; position: relative; z-index: 10;">🔊 The Ultimate 100-Sound Mega Board 🔊</h1>
-<p style="text-align: center; color: #00ff00; position: relative; z-index: 10; margin-bottom: 25px;">Tap any of the 100 continuous buttons below to make custom arcade chip sounds!</p>
+<script>
+  // 1. Intercept all dashboard anchors and route them through our screen frame handler
+  document.addEventListener("DOMContentLoaded", function() {
+    const allLinks = document.querySelectorAll("a");
+    
+    allLinks.forEach(function(link) {
+      // Remove target restriction so it executes inside the same primary viewport window
+      link.removeAttribute("target");
+      
+      link.addEventListener("click", function(event) {
+        const destinationUrl = link.getAttribute("href");
+        
+        // Don't intercept internal anchor links if any exist
+        if (destinationUrl && !destinationUrl.startsWith("#")) {
+          event.preventDefault(); // Stop browser from leaving the site layout
+          openGrailBrowser(destinationUrl);
+        }
+      });
+    });
+  });
 
-<div id="mega-sound-grid" class="btn-grid" style="justify-content: center; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 12px; border: 1px solid #00ff00; max-height: 350px; overflow-y: auto;"></div>
+  // 2. Open the full-screen view window layout 
+  function openGrailBrowser(url) {
+    const container = document.getElementById("grailBrowserContainer");
+    const frame = document.getElementById("grailBrowserFrame");
+    
+    frame.src = url;
+    container.style.display = "block";
+  }
 
-<!-- === YOUR COMPREHENSIVE 50 LINKS DASHBOARD === -->
-<h1 style="color: #00ff00; text-align: center; margin-top: 40px; position: relative; z-index: 10;">🌐 My Mega Links Dashboard</h1>
+  // 3. Close the frame window instantly when tapping the Red Back Button
+  function closeGrailBrowser() {
+    const container = document.getElementById("grailBrowserContainer");
+    const frame = document.getElementById("grailBrowserFrame");
+    
+    container.style.display = "none";
+    frame.src = ""; // Clear background cache instantly
+  }
+</script>
+<!-- ============================================================= -->
 
-<h3 class="cat-title">🧠 Learning & Science</h3>
-<div class="btn-grid">
-  <button onclick="openGrailBrowser('https://wikipedia.org')" class="btn" style="background-color: #34495e;">📚 Wikipedia</button>
-  <button onclick="openGrailBrowser('https://nasa.gov')" class="btn" style="background-color: #2980b9;">🚀 NASA Science</button>
-  <button onclick="openGrailBrowser('https://khanacademy.org')" class="btn" style="background-color: #27ae60;">✏️ Khan Academy</button>
-  <button onclick="openGrailBrowser('https://duolingo.com')" class="btn" style="background-color: #78e08f;">🦉 Duolingo</button>
-  <button onclick="openGrailBrowser('https://nationalgeographic.com')" class="btn" style="background-color: #f1c40f; color: black !important;">🐆 National Geographic</button>
-  <button onclick="openGrailBrowser('https://ted.com')" class="btn" style="background-color: #e74c3c;">💡 TED Talks</button>
-  <button onclick="openGrailBrowser('https://si.edu')" class="btn" style="background-color: #8e44ad;">🏛️ Smithsonian</button>
-  <button onclick="openGrailBrowser('https://britannica.com')" class="btn" style="background-color: #16a085;">📖 Britannica</button>
-  <button onclick="openGrailBrowser('https://codecademy.com')" class="btn" style="background-color: #3c6382;">💻 Codecademy</button>
-  <button onclick="openGrailBrowser('https://brainpop.com')" class="btn" style="background-color: #fa8231;">🤖 BrainPOP</button>
-</div>
 
-<h3 class="cat-title">🎮 Fun & Educational Games</h3>
-<div class="btn-grid">
-  <button onclick="openGrailBrowser('https://code.org')" class="btn" style="background-color: #009432;">🧩 Code.org Hour of Code</button>
-  <button onclick="openGrailBrowser('https://mit.edu')" class="btn" style="background-color: #4a69bd;">🐱 MIT Scratch</button>
-  <button onclick="openGrailBrowser('https://geoguessr.com')" class="btn" style="background-color: #60a3bc;">🌍 GeoGuessr Map Game</button>
-  <button onclick="openGrailBrowser('https://chess.com')" class="btn" style="background-color: #78e08f;">♟️ Chess.com</button>
-  <button onclick="openGrailBrowser('https://coolmathgames.com')" class="btn" style="background-color: #e67e22;">➕ Cool Math Games</button>
-  <button onclick="openGrailBrowser('https://funbrain.com')" class="btn" style="background-color: #ed4c67;">🎈 Funbrain Arcade</button>
-  <button onclick="openGrailBrowser('https://abcya.com')" class="btn" style="background-color: #12cbc4;">✏️ ABCya Games</button>
-  <button onclick="openGrailBrowser('https://pbskids.org')" class="btn" style="background-color: #a3cb38;">📺 PBS Kids Zone</button>
-  <button onclick="openGrailBrowser('https://typingclub.com')" class="btn" style="background-color: #1289a7;">⌨️ TypingClub</button>
-  <button onclick="openGrailBrowser('https://nitrotype.com')" class="btn" style="background-color: #d1ccc0; color: black !important;">🏎️ Nitro Type</button>
-</div>
-
-<h3 class="cat-title">🎨 Creativity & Creative Arts</h3>
-<div class="btn-grid">
-  <button onclick="openGrailBrowser('https://canva.com')" class="btn" style="background-color: #9b59b6;">🎨 Canva Design</button>
-  <button onclick="openGrailBrowser('https://pixlr.com')" class="btn" style="background-color: #3498db;">📸 Pixlr Editor</button>
-  <button onclick="openGrailBrowser('https://withgoogle.com')" class="btn" style="background-color: #e74c3c;">✏️ Quick Draw</button>
-  <button onclick="openGrailBrowser('https://chromeexperiments.com')" class="btn" style="background-color: #1abc9c;">🎵 Chrome Music Lab</button>
-  <button onclick="openGrailBrowser('https://autodraw.com')" class="btn" style="background-color: #2ecc71;">🤖 AutoDraw AI</button>
-  <button onclick="openGrailBrowser('https://origami-way.com')" class="btn" style="background-color: #f39c12;">📐 Origami Guide</button>
-  <button onclick="openGrailBrowser('https://instructables.com')" class="btn" style="background-color: #d35400;">🛠️ Instructables</button>
-  <button onclick="openGrailBrowser('https://crayola.com')" class="btn" style="background-color: #f1c40f; color: black !important;">🖍️ Crayola Crafts</button>
-  <button onclick="openGrailBrowser('https://poetryfoundation.org')" class="btn" style="background-color: #7f8c8d;">✍️ Poetry Foundation</button>
-  <button onclick="openGrailBrowser('https://artstation.com')" class="btn" style="background-color: #2c3e50;">🖼️ ArtStation</button>
-</div>
-
-<h3 class="cat-title">📡 News, Nature & Exploration</h3>
-<div class="btn-grid">
-  <button onclick="openGrailBrowser('https://tweentribune.com')" class="btn" style="background-color: #485460;">📰 TweenTribune</button>
-  <button onclick="openGrailBrowser('https://timeforkids.com')" class="btn" style="background-color: #ff3f34;">⏱️ Time for Kids</button>
-  <button onclick="openGrailBrowser('https://dogonews.com')" class="btn" style="background-color: #05c46b;">🐶 DOGO News</button>
-  <button onclick="openGrailBrowser('https://bbc.com')" class="btn" style="background-color: #ff5e57;">🔴 BBC News</button>
-  <button onclick="openGrailBrowser('https://weather.com')" class="btn" style="background-color: #1e90ff;">🌤️ Weather Channel</button>
-  <button onclick="openGrailBrowser('https://worldwildlife.org')" class="btn" style="background-color: #1e272e;">🐼 WWF Wildlife</button>
-  <button onclick="openGrailBrowser('https://audubon.org')" class="btn" style="background-color: #0be881;">🦅 Audubon Birds</button>
-  <button onclick="openGrailBrowser('https://google.com')" class="btn" style="background-color: #3c6382;">🌏 Google Earth</button>
-  <button onclick="openGrailBrowser('https://history.com')" class="btn" style="background-color: #8854d0;">🏰 History Channel</button>
+# Hello World!
+Welcome to my brand new website using the Cayman theme!
